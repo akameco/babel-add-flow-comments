@@ -1,6 +1,6 @@
 {
   "name": "babel-add-flow-comments",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "add/remove flow comments",
   "license": "MIT",
   "repository": "akameco/babel-add-flow-comments",
