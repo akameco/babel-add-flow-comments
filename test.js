@@ -6,7 +6,7 @@ const removePlugin = () => {
   return {
     name: 'remove-comments',
     visitor: {
-      Program(path /*: Object*/, { file } /*: Object*/) {
+      Program(path /* : Object */, { file } /* : Object */) {
         // remove @flow
         removeFlowComment(file.ast.comments)
       },
@@ -18,7 +18,7 @@ const addPlugin = () => {
   return {
     name: 'add-comments',
     visitor: {
-      Program(path /*: Object */) {
+      Program(path /* : Object */) {
         addFlowComment(path)
       },
     },
@@ -37,6 +37,10 @@ pluginTester({
   plugin: addPlugin,
   snapshot: true,
   tests: {
+    'already @flow': `
+    // @flow
+    const a = 1
+    `,
     'add comments': '"use strict";',
     func: 'function sum(a, b) { return a + b; }',
     var: 'const a = 2',

@@ -153,6 +153,13 @@ assert-plus@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-0.2.0.tgz#d74e1b87e7affc0db8aadb7021f3fe48101ab234"
 
+ast-pretty-print@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ast-pretty-print/-/ast-pretty-print-2.0.0.tgz#bd9da89d6fa5f035dd03e378a8b9cf3a6eae61d6"
+  dependencies:
+    pretty-format "^20.0.3"
+    pretty-format-ast "^1.0.0"
+
 async-each@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
@@ -362,6 +369,12 @@ babel-jest@^20.0.3:
     babel-core "^6.0.0"
     babel-plugin-istanbul "^4.0.0"
     babel-preset-jest "^20.0.3"
+
+babel-log@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/babel-log/-/babel-log-2.0.0.tgz#9925f99521d3d3ccb5839c0a31120291dd1ba638"
+  dependencies:
+    ast-pretty-print "^2.0.0"
 
 babel-messages@^6.23.0:
   version "6.23.0"
@@ -2598,6 +2611,10 @@ preserve@^0.2.0:
 prettier@^1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.4.4.tgz#a8d1447b14c9bf67e6d420dcadd10fb9a4fad65a"
+
+pretty-format-ast@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/pretty-format-ast/-/pretty-format-ast-1.0.0.tgz#0da501e439125741971a47bc442dc6768951d5fe"
 
 pretty-format@^20.0.3:
   version "20.0.3"

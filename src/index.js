@@ -28,5 +28,22 @@ export function removeFlowComment(comments /* : Comments */) {
 
 // line ? /* @flow */ or // @flow
 export function addFlowComment(path /* : Object */) {
-  path.addComment('leading', ` ${FLOW_DIRECTIVE}`, true)
+  if (!isFlowFile(path)) {
+    path.addComment('leading', ` ${FLOW_DIRECTIVE}`, true)
+  }
+}
+
+export function isFlowFile(path /* : Object */) {
+  const file = path.get('file')
+  if (!file || !file.hub) {
+    return false
+  }
+
+  const { comments } = file.hub.file.ast
+
+  if (comments) {
+    return comments.some(v => v.value.indexOf(FLOW_DIRECTIVE) >= 0)
+  }
+
+  return false
 }
