@@ -1150,8 +1150,8 @@ eslint-plugin-import@^2.3.0:
     read-pkg-up "^2.0.0"
 
 eslint-plugin-prettier@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.1.1.tgz#2fb7e2ab961f2b61d2c8cf91bc17716ca8c53868"
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.1.2.tgz#4b90f4ee7f92bfbe2e926017e1ca40eb628965ea"
   dependencies:
     fast-diff "^1.1.1"
     jest-docblock "^20.0.1"
@@ -2082,7 +2082,7 @@ jest-validate@^20.0.3:
     leven "^2.1.0"
     pretty-format "^20.0.3"
 
-jest@^0.20.4:
+jest@^20.0.4:
   version "20.0.4"
   resolved "https://registry.yarnpkg.com/jest/-/jest-20.0.4.tgz#3dd260c2989d6dad678b1e9cc4d91944f6d602ac"
   dependencies:
