@@ -1,0 +1,41 @@
+{
+  "name": "babel-add-flow-comments",
+  "version": "0.0.0",
+  "description": "add/remove flow comments",
+  "license": "MIT",
+  "repository": "akameco/babel-add-flow-comments",
+  "author": {
+    "name": "akameco",
+    "email": "akameco.t@gmail.com",
+    "url": "akameco.github.io"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "prepublish": "yarn build",
+    "build": "babel src -d lib",
+    "prettier": "prettier --write --single-quote --no-semi '**/*.js'",
+    "lint": "eslint .",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-tester": "^3.1.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.5.2",
+    "eslint": "^4.0.0",
+    "eslint-config-precure": "^0.6.0",
+    "jest": "^0.20.4",
+    "prettier": "^1.4.4"
+  }
+}

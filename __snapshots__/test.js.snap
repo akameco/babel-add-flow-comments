@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1. add comments 1`] = `
+"
+\\"use strict\\";
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+// @flow
+\\"use strict\\";
+"
+`;
+
+exports[`1. remove comments 1`] = `
+"
+// @flow
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+
+"
+`;
+
+exports[`2. func 1`] = `
+"
+function sum(a, b) { return a + b; }
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+// @flow
+function sum(a, b) {
+  return a + b;
+}
+"
+`;
+
+exports[`3. var 1`] = `
+"
+const a = 2
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+// @flow
+const a = 2;
+"
+`;
