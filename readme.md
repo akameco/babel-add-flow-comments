@@ -24,6 +24,10 @@ add `// @flow`
 
 remove `// @flow` for `/* @flow */`
 
+### isFlowFile(path): boolean
+
+when `// @flow`, return true.
+
 ## License
 
 MIT © [akameco](http://akameco.github.io)
