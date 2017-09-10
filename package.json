@@ -15,7 +15,7 @@
   "scripts": {
     "prepublish": "yarn build",
     "build": "babel src -d lib",
-    "prettier": "prettier --write --single-quote --no-semi '**/*.js'",
+    "prettier": "prettier --write '**/*.js'",
     "flow": "flow",
     "lint": "eslint .",
     "test": "jest",
