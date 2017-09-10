@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`1. already @flow 1`] = `
+exports[`add comments 1`] = `
+"
+\\"use strict\\";
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+// @flow
+\\"use strict\\";
+"
+`;
+
+exports[`already @flow 1`] = `
 "
 // @flow
 const a = 1
@@ -12,28 +23,7 @@ const a = 1;
 "
 `;
 
-exports[`1. remove comments 1`] = `
-"
-// @flow
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-
-"
-`;
-
-exports[`2. add comments 1`] = `
-"
-\\"use strict\\";
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-// @flow
-\\"use strict\\";
-"
-`;
-
-exports[`3. func 1`] = `
+exports[`func 1`] = `
 "
 function sum(a, b) { return a + b; }
 
@@ -46,7 +36,17 @@ function sum(a, b) {
 "
 `;
 
-exports[`4. var 1`] = `
+exports[`remove comments 1`] = `
+"
+// @flow
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+
+"
+`;
+
+exports[`var 1`] = `
 "
 const a = 2
 
