@@ -12,6 +12,10 @@ $ npm install --dev babel-add-flow-comments
 
 ## API
 
+### default: flowComment(programPath: Path)
+
+add `// @flow` to top.
+
 ### addFlowComment(path: Path)
 
 #### path
