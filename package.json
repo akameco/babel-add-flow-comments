@@ -1,6 +1,6 @@
 {
   "name": "babel-add-flow-comments",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "add/remove flow comments",
   "license": "MIT",
   "repository": "akameco/babel-add-flow-comments",
@@ -22,8 +22,15 @@
     "test:watch": "jest --watch"
   },
   "main": "lib/index.js",
-  "files": ["lib"],
-  "keywords": ["babel", "flow", "comments", "s2s"],
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "babel",
+    "flow",
+    "comments",
+    "s2s"
+  ],
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
