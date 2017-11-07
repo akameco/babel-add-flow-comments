@@ -1,29 +1,35 @@
 // @flow
 import pluginTester from 'babel-plugin-tester'
-import { removeFlowComment, addFlowComment } from './src'
+import flowComment, { removeFlowComment, addFlowComment } from './src'
 
-const removePlugin = () => {
-  return {
-    name: 'remove-comments',
-    visitor: {
-      Program(path /* : Object */, { file } /* : Object */) {
-        // remove @flow
-        removeFlowComment(file.ast.comments)
-      },
+const createPlugin = (name = 'plugin', fn) => () => ({
+  name,
+  visitor: {
+    Program(path) {
+      fn(path)
     },
-  }
-}
+  },
+})
 
-const addPlugin = () => {
-  return {
-    name: 'add-comments',
-    visitor: {
-      Program(path /* : Object */) {
-        addFlowComment(path)
-      },
+const removePlugin = () => ({
+  name: 'remove-comments',
+  visitor: {
+    Program(path, { file }) {
+      removeFlowComment(file.ast.comments)
     },
-  }
-}
+  },
+})
+
+pluginTester({
+  plugin: createPlugin('default', flowComment),
+  snapshot: true,
+  tests: {
+    'add comment top': `
+    var a = 'a'
+    // @flow
+    `,
+  },
+})
 
 pluginTester({
   plugin: removePlugin,
@@ -34,7 +40,7 @@ pluginTester({
 })
 
 pluginTester({
-  plugin: addPlugin,
+  plugin: createPlugin('add-comments', addFlowComment),
   snapshot: true,
   tests: {
     'already @flow': `

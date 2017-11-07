@@ -11,6 +11,12 @@ type Comments = Array<Comment>
 
 const FLOW_DIRECTIVE = '@flow'
 
+export default function flowComment(programPath /* : Object */) {
+  const file = programPath.get('file')
+  removeFlowComment(file.hub.file.ast.comments)
+  programPath.addComment('leading', ` ${FLOW_DIRECTIVE}`, true)
+}
+
 export function removeFlowComment(comments /* : Comments */) {
   if (!Array.isArray(comments)) {
     throw new TypeError(`Expected a Array<Comment>, got ${typeof comments}`)

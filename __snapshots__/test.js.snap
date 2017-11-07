@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`add comment top 1`] = `
+"
+var a = 'a'
+// @flow
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+// @flow
+var a = 'a';
+"
+`;
+
 exports[`add comments 1`] = `
 "
 \\"use strict\\";
