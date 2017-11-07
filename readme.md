@@ -20,7 +20,7 @@ Type: `Object`
 
 add `// @flow`
 
-### removeFlowComment()
+### removeFlowComment(comments)
 
 remove `// @flow` for `/* @flow */`
 
