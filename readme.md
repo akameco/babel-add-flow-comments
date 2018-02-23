@@ -1,5 +1,7 @@
 # babel-add-flow-comments
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/akameco/babel-add-flow-comments.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/akameco/babel-add-flow-comments.svg?branch=master)](https://travis-ci.org/akameco/babel-add-flow-comments)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
