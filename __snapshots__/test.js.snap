@@ -1,18 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`add comment top 1`] = `
-"
-var a = 'a'
-// @flow
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-// @flow
-var a = 'a';
-"
-`;
-
-exports[`add comments 1`] = `
+exports[`add-comments add comments: add comments 1`] = `
 "
 \\"use strict\\";
 
@@ -23,7 +11,7 @@ exports[`add comments 1`] = `
 "
 `;
 
-exports[`already @flow 1`] = `
+exports[`add-comments already @flow: already @flow 1`] = `
 "
 // @flow
 const a = 1
@@ -35,30 +23,21 @@ const a = 1;
 "
 `;
 
-exports[`func 1`] = `
+exports[`add-comments func: func 1`] = `
 "
 function sum(a, b) { return a + b; }
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
 // @flow
+
 function sum(a, b) {
   return a + b;
 }
 "
 `;
 
-exports[`remove comments 1`] = `
-"
-// @flow
-
-      ↓ ↓ ↓ ↓ ↓ ↓
-
-
-"
-`;
-
-exports[`var 1`] = `
+exports[`add-comments var: var 1`] = `
 "
 const a = 2
 
@@ -66,5 +45,27 @@ const a = 2
 
 // @flow
 const a = 2;
+"
+`;
+
+exports[`default add comment top: add comment top 1`] = `
+"
+var a = 'a'
+// @flow
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+// @flow
+var a = 'a';
+"
+`;
+
+exports[`remove-comments remove comments: remove comments 1`] = `
+"
+// @flow
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+
 "
 `;

@@ -23,9 +23,9 @@ export function removeFlowComment(comments /* : Comments */) {
   }
 
   for (const comment of comments) {
-    if (comment.value.indexOf(FLOW_DIRECTIVE) >= 0) {
+    if (comment.value.includes(FLOW_DIRECTIVE)) {
       comment.value = comment.value.replace(FLOW_DIRECTIVE, '')
-      if (!comment.value.replace(/\*/g, '').trim()) {
+      if (!comment.value.replace(/\*/gu, '').trim()) {
         comment.ignore = true
       }
     }
@@ -48,7 +48,7 @@ export function isFlowFile(path /* : Object */) {
   const { comments } = file.hub.file.ast
 
   if (comments) {
-    return comments.some(v => v.value.indexOf(FLOW_DIRECTIVE) >= 0)
+    return comments.some(v => v.value.includes(FLOW_DIRECTIVE))
   }
 
   return false
